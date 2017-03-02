@@ -1,0 +1,23 @@
+#org.jbehave.core.reporters.PostStoryStatisticsCollector
+#Tue Feb 28 23:10:33 MSK 2017
+notAllowed=0
+examples=0
+scenariosNotAllowed=0
+pending=0
+stepsPending=0
+stepsNotPerformed=4
+scenariosSuccessful=1
+comments=0
+givenStoryScenarios=0
+givenStoryScenariosFailed=0
+stepsFailed=2
+scenarios=3
+givenStories=0
+stepsSuccessful=13
+steps=19
+givenStoryScenariosPending=0
+scenariosPending=0
+stepsIgnorable=0
+givenStoryScenariosNotAllowed=0
+scenariosFailed=2
+givenStoryScenariosSuccessful=0

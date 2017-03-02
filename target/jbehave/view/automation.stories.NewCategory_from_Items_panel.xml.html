@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>automation.stories.NewCategory_from_Items_panel</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+<story path="automation/stories/NewCategory_from_Items_panel.story" title="">
+<meta>
+<property keyword="@" name="entity" value=""/>
+</meta>
+<scenario keyword="Scenario:" title="Navigate to Items panel">
+<step outcome="successful">Given login as a admin</step>
+<step outcome="successful">Then the body of app is loaded</step>
+<step outcome="successful">When I select <parameter>Catalog</parameter> tab of header navigation</step>
+<step outcome="successful">Then assert that header tab <parameter>Catalog</parameter> is active</step>
+<step outcome="successful">Then I assert that secondary tabs are displayed</step>
+<step outcome="successful">When I navigate to <parameter>Items</parameter> tab</step>
+<step outcome="successful">Then items tab is opened</step>
+<step outcome="successful">And New Category button is displayed</step>
+</scenario>
+<scenario keyword="Scenario:" title="New category creating, saving and publishing">
+<step outcome="successful">When select New Category button</step>
+<step outcome="successful">And input in category name field <parameter>Automation_Test</parameter></step>
+<step outcome="successful">And input in category email field <parameter>Test@gmail.com</parameter></step>
+<step outcome="successful">And add image to new category</step>
+<step outcome="successful">Then assert that image is loaded</step>
+<step outcome="failed" keyword="FAILED">When I click on Save button<failure>org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for visibility of element located by By.xpath: .//*[@class=&apos;top&apos;]//button[3]
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;IVANOVA-YA&apos;, ip: &apos;9.49.143.65&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_102&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\IVANOV~1\AppData\Local\Temp\scoped_dir9432_13405}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 39b84a47746f83e8f2d60f40bf1f9883</failure></step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then created category <parameter>Automation_Test</parameter> is displayed in left menu</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">When I click on Publish button</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then buttom Publish is not displayed</step>
+</scenario>
+<scenario keyword="Scenario:" title="Cleanup steps">
+<step outcome="failed" keyword="FAILED">When I click on Delete button<failure>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//button[contains(text(), &apos;Delete&apos;)]&quot;}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 26 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;IVANOVA-YA&apos;, ip: &apos;9.49.143.65&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_102&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\IVANOV~1\AppData\Local\Temp\scoped_dir9432_13405}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 39b84a47746f83e8f2d60f40bf1f9883
+*** Element info: {Using=xpath, value=.//button[contains(text(), &apos;Delete&apos;)]}</failure></step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then created category <parameter>Automation_Test</parameter> is not displayed in left menu</step>
+</scenario>
+</story>
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

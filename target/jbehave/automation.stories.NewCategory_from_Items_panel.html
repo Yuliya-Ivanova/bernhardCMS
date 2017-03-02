@@ -1,0 +1,51 @@
+<div class="story">
+<h1></h1>
+<div class="path">automation/stories/NewCategory_from_Items_panel.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@entity </div>
+</div>
+<div class="scenario">
+<h2>Scenario: Navigate to Items panel</h2>
+<div class="step successful">Given login as a admin</div>
+<div class="step successful">Then the body of app is loaded</div>
+<div class="step successful">When I select <span class="step parameter">Catalog</span> tab of header navigation</div>
+<div class="step successful">Then assert that header tab <span class="step parameter">Catalog</span> is active</div>
+<div class="step successful">Then I assert that secondary tabs are displayed</div>
+<div class="step successful">When I navigate to <span class="step parameter">Items</span> tab</div>
+<div class="step successful">Then items tab is opened</div>
+<div class="step successful">And New Category button is displayed</div>
+</div>
+<div class="scenario">
+<h2>Scenario: New category creating, saving and publishing</h2>
+<div class="step successful">When select New Category button</div>
+<div class="step successful">And input in category name field <span class="step parameter">Automation_Test</span></div>
+<div class="step successful">And input in category email field <span class="step parameter">Test@gmail.com</span></div>
+<div class="step successful">And add image to new category</div>
+<div class="step successful">Then assert that image is loaded</div>
+<div class="step failed">When I click on Save button <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for visibility of element located by By.xpath: .//*[@class='top']//button[3]
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'IVANOVA-YA', ip: '9.49.143.65', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\IVANOV~1\AppData\Local\Temp\scoped_dir9432_13405}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 39b84a47746f83e8f2d60f40bf1f9883</span></div>
+<div class="step notPerformed">Then created category <span class="step parameter">Automation_Test</span> is displayed in left menu <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div class="step notPerformed">When I click on Publish button <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div class="step notPerformed">Then buttom Publish is not displayed <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+</div>
+<div class="scenario">
+<h2>Scenario: Cleanup steps</h2>
+<div class="step failed">When I click on Delete button <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//button[contains(text(), 'Delete')]&quot;}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 26 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'IVANOVA-YA', ip: '9.49.143.65', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\IVANOV~1\AppData\Local\Temp\scoped_dir9432_13405}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 39b84a47746f83e8f2d60f40bf1f9883
+*** Element info: {Using=xpath, value=.//button[contains(text(), 'Delete')]}</span></div>
+<div class="step notPerformed">Then created category <span class="step parameter">Automation_Test</span> is not displayed in left menu <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+</div>
+</div>

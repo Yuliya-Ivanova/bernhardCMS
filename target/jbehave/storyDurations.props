@@ -1,0 +1,7 @@
+#org.jbehave.core.embedder.StoryManager
+#Tue Feb 28 23:10:39 MSK 2017
+threads=1
+total=48000
+threadAverage=48000
+automation/stories/NewCategory_from_Rooms_panel.story=6000
+automation/stories/NewCategory_from_Items_panel.story=42000
