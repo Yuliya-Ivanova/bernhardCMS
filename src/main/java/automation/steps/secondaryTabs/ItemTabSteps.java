@@ -87,7 +87,7 @@ public class ItemTabSteps {
         assertThat(itemsTab.categoryInLeftPanel(nameCategory).isSelected(), is(false));
     }
 
-    @Then("buttom Publish is not displayed")
+    @Then("button Publish is not displayed")
     public void assertThatTopButtonNotDisplayed() {
         assertThat(itemsTab.publishButton().isSelected(), is(false));
     }

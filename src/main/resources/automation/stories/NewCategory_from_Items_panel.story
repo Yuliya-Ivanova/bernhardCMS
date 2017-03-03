@@ -28,7 +28,7 @@ When I click on Save button
 Then created category Automation_Test is displayed in left menu
 
 When I click on Publish button
-Then buttom Publish is not displayed
+Then button Publish is not displayed
 
 Scenario: Cleanup steps
 When I click on Delete button
